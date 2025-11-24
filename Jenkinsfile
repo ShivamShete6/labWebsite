@@ -2,14 +2,14 @@ pipeline {
     agent any
     
     environment {
-        DEPLOY_DIR = 'C:\\inetpub\\wwwroot\\protfolio'   // Create subfolder for your project
+        DEPLOY_DIR = 'C:\\inetpub\\wwwroot\\2203105'   // Create subfolder for your project
     }
     
     stages {
         stage('Checkout') {
             steps {
                 echo 'Cloning project from GitHub...'
-                git branch: 'main', url: 'https://github.com/Patiladitya45/protfolio.git'
+                git branch: 'main', url: 'https://github.com/ShivamShete6/labWebsite.git'
             }
         }
         
@@ -43,7 +43,7 @@ pipeline {
     
     post {
         success {
-            echo 'Pipeline finished successfully! Visit:http://127.0.0.1:3000/index.html'
+            echo 'Pipeline finished successfully! file:///C:/2203105/index.html'
         }
         failure {
             echo 'Pipeline failed! Check build logs.'
